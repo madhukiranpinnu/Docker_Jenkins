@@ -3,7 +3,7 @@ services:
  vendorportal:
   image: 7013918149/v4
   environment:
-   - BROWSER=chrome
+   - BROWSER=${BROWSER}
    - HOST=hub
    - THREADCOUNT=3
    - TESTXML=Vendorportal.xml  
@@ -12,7 +12,7 @@ services:
  flight:
   image: 7013918149/v4
   environment:
-   - BROWSER=chrome
+   - BROWSER=${BROWSER}
    - HOST=hub
    - THREADCOUNT=4
    - TESTXML=FlightReservation.xml  
