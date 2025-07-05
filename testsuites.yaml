@@ -1,0 +1,20 @@
+version: '3'
+services:
+ vendorportal:
+  image: 7013918149/v4
+  environment:
+   - BROWSER=chrome
+   - HOST=hub
+   - THREADCOUNT=3
+   - TESTXML=Vendorportal.xml  
+  volumes:
+   - C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\14Framework/output/vendor:/home/Selenium-Docker/test-output  
+ flight:
+  image: 7013918149/v4
+  environment:
+   - BROWSER=chrome
+   - HOST=hub
+   - THREADCOUNT=4
+   - TESTXML=FlightReservation.xml  
+  volumes:
+   - C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\14Framework/output/flight:/home/Selenium-Docker/test-output    

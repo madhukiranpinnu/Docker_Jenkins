@@ -1,15 +1,21 @@
 pipeline{
     agent any
     stages{
-        stage("image up"){
+        stage("grid up"){
             steps{
-                bat "docker-compose up"
+                bat "docker-compose -f grid.yaml up -d"
             }
         }
-        stage("image down"){
+        stage("test-suite up"){
             steps{
-                bat "docker-compose down"
+                bat "docker-compose -f testsuites.yaml up"
             }
+        }
+    }
+    post{
+        always{
+            bat "docker-compose -f grid.yaml down"
+            bat "docker-compose -f testsuites.yaml down"
         }
     }
 }
