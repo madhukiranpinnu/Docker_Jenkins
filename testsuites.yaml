@@ -8,7 +8,7 @@ services:
    - THREADCOUNT=3
    - TESTXML=Vendorportal.xml  
   volumes:
-   - C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\15Jenkins ci cd\output\node\workspace\Docker-Compose\output\node\workspace\Docker-Compose/output/vendor:/home/Selenium-Docker/test-output  
+   - C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\15Jenkins ci cd\output\node\workspace\Docker-Compose/output/vendor:/home/Selenium-Docker/test-output  
  flight:
   image: 7013918149/v4
   environment:
@@ -17,4 +17,4 @@ services:
    - THREADCOUNT=4
    - TESTXML=FlightReservation.xml  
   volumes:
-   -  C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\15Jenkins ci cd\output\node\workspace\Docker-Compose\output\node\workspace\Docker-Compose/output/flight:/home/Selenium-Docker/test-output    
+   -  C:\Users\madhu\AppData\Local\Docker\wsl\Docker\Framework\15Jenkins ci cd\output\node\workspace\Docker-Compose/output/flight:/home/Selenium-Docker/test-output    
